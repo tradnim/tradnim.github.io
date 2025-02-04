@@ -1,79 +1,81 @@
-:root {
-    --terminal-green: #00ff00;
-    --background: #001100;
-    --card-bg: #002200;
-}
-
 body {
-    background-color: var(--background);
-    color: var(--terminal-green);
+    background-color: #000;
+    color: #0f0;
     font-family: 'Courier New', monospace;
-    line-height: 1.6;
     margin: 0;
     padding: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.terminal-header {
-    text-align: center;
-    border-bottom: 2px solid var(--terminal-green);
-    padding: 1rem;
-}
-
-.terminal-container {
+.terminal {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.terminal-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--terminal-green);
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    padding: 15px;
-    border: 1px solid var(--terminal-green);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.terminal-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--terminal-green);
-    color: var(--background);
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-
-.terminal-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--terminal-green);
-    margin-top: 40px;
-}
-
 .ascii-art {
-    color: var(--terminal-green);
     white-space: pre;
-    overflow-x: auto;
+    text-align: center;
+    color: #0f0;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+#output {
+    margin-bottom: 10px;
+    min-height: 300px;
+    overflow-y: auto;
 }
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 5px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.command-response {
+    margin: 5px 0;
+    padding-left: 10px;
+    border-left: 2px solid #0f03;
+}
+
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:root {
+    --primary-color: #0f0;
+    --secondary-color: #0f0;
+    --bg-color: #000;
+  }
+  
+  .system-message {
+    color: var(--secondary-color);
+    opacity: 0.7;
+  }
+  
+  .urgent-message {
+    color: #f00;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
