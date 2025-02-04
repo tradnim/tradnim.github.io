@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Terminal</title>
+    <title>Retro Terminal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="clickToStart">
+        <div class="init-prompt">CLICK TO INITIALIZE SYSTEM</div>
+        <div class="init-subtext">[ BIOS version 2.13 ]</div>
+    </div>
+
+    <div class="loading-screen">
+        <div class="boot-loader">
+            <div class="ascii-art">SYSTEM BIOS INITIALIZATION</div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <div class="boot-memory-test"></div>
+            <div class="system-message">MEMORY TEST: 0000-FFFF</div>
+        </div>
+    </div>
+
     <div class="terminal">
         <pre class="ascii-art">
-            ███▄ ▄███▓ ▄▄▄       ██▓███   ██▓    ▓█████▄▄▄█████▓▓█████  ▄████▄   ██░ ██ 
-            ▓██▒▀█▀ ██▒▒████▄    ▓██░  ██▒▓██▒    ▓█   ▀▓  ██▒ ▓▒▓█   ▀ ▒██▀ ▀█  ▓██░ ██▒
-            ▓██    ▓██░▒██  ▀█▄  ▓██░ ██▓▒▒██░    ▒███  ▒ ▓██░ ▒░▒███   ▒▓█    ▄ ▒██▀▀██░
-            ▒██    ▒██ ░██▄▄▄▄██ ▒██▄█▓▒ ▒▒██░    ▒▓█  ▄░ ▓██▓ ░ ▒▓█  ▄ ▒▓▓▄ ▄██▒░▓█ ░██ 
-            ▒██▒   ░██▒ ▓█   ▓██▒▒██▒ ░  ░░██████▒░▒████▒ ▒██▒ ░ ░▒████▒▒ ▓███▀ ░░▓█▒░██▓
-            ░ ▒░   ░  ░ ▒▒   ▓▒█░▒▓▒░ ░  ░░ ▒░▓  ░░░ ▒░ ░ ▒ ░░   ░░ ▒░ ░░ ░▒ ▒  ░ ▒ ░░▒░▒
-            ░  ░      ░  ▒   ▒▒ ░░▒ ░     ░ ░ ▒  ░ ░ ░  ░   ░     ░ ░  ░  ░  ▒    ▒ ░▒░ ░
-            ░      ░     ░   ▒   ░░         ░ ░      ░    ░         ░   ░         ░  ░░ ░
-                   ░         ░  ░             ░  ░   ░  ░           ░  ░░ ░       ░  ░  ░
+███▄ ▄███▓ ▄▄▄       ██▓███   ██▓    ▓█████▄▄▄█████▓▓█████  ▄████▄   ██░ ██ 
+▓██▒▀█▀ ██▒▒████▄    ▓██░  ██▒▓██▒    ▓█   ▀▓  ██▒ ▓▒▓█   ▀ ▒██▀ ▀█  ▓██░ ██▒
+▓██    ▓██░▒██  ▀█▄  ▓██░ ██▓▒▒██░    ▒███  ▒ ▓██░ ▒░▒███   ▒▓█    ▄ ▒██▀▀██░
+▒██    ▒██ ░██▄▄▄▄██ ▒██▄█▓▒ ▒▒██░    ▒▓█  ▄░ ▓██▓ ░ ▒▓█  ▄ ▒▓▓▄ ▄██▒░▓█ ░██ 
+▒██▒   ░██▒ ▓█   ▓██▒▒██▒ ░  ░░██████▒░▒████▒ ▒██▒ ░ ░▒████▒▒ ▓███▀ ░░▓█▒░██▓
+░ ▒░   ░  ░ ▒▒   ▓▒█░▒▓▒░ ░  ░░ ▒░▓  ░░░ ▒░ ░ ▒ ░░   ░░ ▒░ ░░ ░▒ ▒  ░ ▒ ░░▒░▒
+░  ░      ░  ▒   ▒▒ ░░▒ ░     ░ ░ ▒  ░ ░ ░  ░   ░     ░ ░  ░  ░  ▒    ▒ ░▒░ ░
+░      ░     ░   ▒   ░░         ░ ░      ░    ░         ░   ░         ░  ░░ ░
+   ░         ░  ░             ░  ░   ░  ░           ░  ░░ ░       ░  ░  ░
                                                                         ░                                                                          
         </pre>
         <div id="output"></div>
@@ -26,6 +42,7 @@
             <input type="text" id="command-input" autofocus>
         </div>
     </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
